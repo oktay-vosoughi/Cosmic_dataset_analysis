@@ -1,0 +1,9 @@
+# Licensed / large COSMIC inputs are never committed
+data/
+*.tsv
+CosmicMutantExport*
+.ipynb_checkpoints/
+.DS_Store
+~$*
+.~lock*
+__pycache__/

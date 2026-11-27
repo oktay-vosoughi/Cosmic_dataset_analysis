@@ -1,0 +1,9 @@
+pandas>=2.0
+numpy
+scipy
+statsmodels
+openpyxl
+matplotlib
+seaborn
+jupyter
+nbconvert
