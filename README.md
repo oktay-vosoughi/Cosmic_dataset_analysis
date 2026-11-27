@@ -35,3 +35,22 @@ The raw COSMIC export (about 17 GB) and record-level extracts are licensed by CO
 ## Differences from the old code
 Exact gene-symbol matching (the old substring match also caught SAGE1, CSAG1/2, GNB1L), ARRB1 and GNB1 now
 included in the sample screen, no hard-coded Windows paths, scripts runnable from the command line.
+
+## Change log (Nov 2026 rewrite)
+**Removed** (old, non-working uploads from 2024; still in git history):
+`cosmic.ipynb`, `cosmic preprocess.ipynb`, `final cosmic.ipynb`, `preproseccing 2.ipynb`.
+
+**Added**
+- `src/01-05` scripts (preprocessing, ARRB1/ARRB2 candidates, sample screen, per-gene counts, cross-database check) and `src/common.py`.
+- `notebooks/statistical_co_mutation_analysis.ipynb` (executed; Fisher / Haldane-Anscombe / Benjamini-Hochberg).
+- `results/` (statistics for 2,835 tests, ARRB recurrence tables, same-sample co-mutations, panel counts, cross-database table).
+- `external_data/GPCR_Mutations_in_TCGA.xlsx`, `docs/data_provenance.md`, `requirements.txt`, `.gitignore`.
+
+**Verified** against `cosmiccleaned_07_24.csv`: ARRB1 159 records / 126 substitutions / 154 samples; ARRB2 160 / 122 / 149;
+6,152 panel samples; 4 samples with ARRB1+ARRB2 missense (incl. lung sample 2640423, T224N + T268I);
+the statistics table is identical to the earlier run. Step 1 (raw file) was tested on a synthetic file only.
+
+**Known limitations**
+- TCGA has no ARRB1 and GENIE has no arrestins, so the cross-check does not validate the arrestin candidates.
+- Residue numbering differs between transcripts/databases (e.g. GNAS R844 in COSMIC = R201 canonical).
+- COSMIC raw data, the AACR GENIE export, and unpublished manuscript files are intentionally not included.
