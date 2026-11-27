@@ -23,3 +23,13 @@ Reproduced from `cosmiccleaned_07_24.csv` by `src/02_arrestin_candidates.py` and
 - Absence of a record is treated as wild-type; it cannot be told apart from "not sequenced".
 - Pan-cancer exclusivity involving GNAS/GNAQ/GNA11 is confounded by tissue of origin; use the tissue-stratified results.
 - Raw COSMIC data is licensed and not redistributed here; obtain it from https://cancer.sanger.ac.uk/cosmic.
+
+## Cross-database check (TCGA / AACR GENIE)
+`src/05_cross_database_check.py` compares COSMIC's top-5 substitutions per gene with the cBioPortal exports.
+- The TCGA export has **no ARRB1** rows and the GENIE export contains only GNAS, GNAQ, GNA11 and GNB1, so ARRB1
+  (and ARRB2 for GENIE) is **not validated** by either; ARRB2 p.T268I is not confirmed externally.
+- Residue numbering is transcript-dependent: COSMIC reports the GNAS hotspot as p.R844C/H, which is R201C/H on the
+  canonical transcript used by cBioPortal. Overlap counts for GNAS are therefore not meaningful without mapping.
+- The TCGA workbook (`external_data/`) is a hand-assembled cBioPortal export with some untidy gene names
+  (e.g. `GNB4    `, `Gna 13`); the script strips whitespace. The AACR GENIE export is not redistributed here
+  (GENIE data-use terms); pass it locally with `--genie`.

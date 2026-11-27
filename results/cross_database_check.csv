@@ -1,0 +1,16 @@
+dataset,gene,external_missense_records,cosmic_top5_seen_in_external,status
+TCGA,GNAS,236,2.0,present
+TCGA,GNAQ,88,3.0,present
+TCGA,GNA11,79,2.0,present
+TCGA,GNA13,0,,absent from external export
+TCGA,GNA14,59,3.0,present
+TCGA,GNA15,52,2.0,present
+TCGA,GNAI1,56,2.0,present
+TCGA,GNAI2,48,1.0,present
+TCGA,GNB1,49,1.0,present
+TCGA,GNB3,56,4.0,present
+TCGA,GNB5,53,2.0,present
+TCGA,ARR3,0,,absent from external export
+TCGA,SAG,0,,absent from external export
+TCGA,ARRB1,0,,absent from external export
+TCGA,ARRB2,41,1.0,present
