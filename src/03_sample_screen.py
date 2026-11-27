@@ -1,7 +1,6 @@
 """Step 3: exploratory sample-level screen - which COSMIC samples carry missense in >=2 panel genes.
 
-Replaces the old 'final cosmic.ipynb', which omitted ARRB1 and had an empty GNB1 list (typo 'GNAB1').
-Here all 15 panel genes are included.
+All 15 panel genes (including ARRB1 and GNB1) are screened.
 
 Usage: python src/03_sample_screen.py --cosmic data/cosmic_panel_missense.csv --outdir results
 """

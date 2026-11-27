@@ -1,4 +1,4 @@
-"""Step 4: per-gene amino-acid substitution counts (replaces the hand-made cosmicMutations_07_2024.xlsx).
+"""Step 4: per-gene amino-acid substitution counts.
 
 Usage: python src/04_gene_substitution_counts.py --cosmic data/cosmic_panel_missense.csv --outdir results
 Writes results/panel_substitution_counts.csv (gene, Mutation AA, count, n_samples, primary sites).
